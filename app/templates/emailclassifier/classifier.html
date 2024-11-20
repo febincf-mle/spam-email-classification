@@ -1,0 +1,22 @@
+{% extends 'base/layout.html' %}
+{% load static %}
+
+{% block title %} Email Spam Classifier {% endblock %}
+{% block link %}
+  <link rel="stylesheet" href="{% static 'styles/classifier.css' %}">
+{% endblock %}
+{% block content %}
+  <div class="chat-container">
+    <header>
+      <h1>Email Spam Classifier</h1>
+    </header>
+    <div class="chat-window" id="chat-window">
+      <!-- Chat bubbles will dynamically appear here -->
+    </div>
+    <div class="chat-input-container">
+      <textarea id="email-input" placeholder="Type or paste your email content here..."></textarea>
+      <button id="send-button">Classify</button>
+    </div>
+  </div>
+  <script src="{% static 'js/classifier.js' %}"></script>
+{% endblock %}
